@@ -1,0 +1,326 @@
+*
+{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+body
+{
+	background-image: url(background2.jpg);
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+	font-family: sans-serif;
+	
+}
+.menu-bar
+{
+	height: auto;
+	background: #0008;
+	text-align:left;
+	align-items: center;
+	
+}
+
+.menu-bar ul
+{
+	width:70%;
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+}
+.menu-bar ul li
+{
+	
+	width:auto;
+	margin:10px;
+	padding: 10px;
+}
+.menu-bar ul li a
+{
+	
+	text-decoration:none;
+	color:#fff;
+}
+
+.active1, .menu-bar ul li:hover
+{
+	background: #c76714;
+	border-radius: 3px;
+}
+
+
+.sub-menu-1
+{
+	display:none;
+}
+
+.menu-bar ul li:hover  .sub-menu-1
+{
+	display:block;
+	position:absolute;
+	background: #0009;
+	margin-top: 15px;
+	margin-left: -15px;
+	transition: 0.8s all;
+}
+
+.menu-bar ul li:hover  .sub-menu-1 ul
+{
+	display: block;
+	margin: 10px;
+	margin-top: -15px;
+	padding-top: 25px;
+}
+
+.menu-bar ul li:hover  .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+
+.menu-bar ul li:hover  .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+	
+}
+.menu-bar ul li:hover  .sub-menu-1 ul li a:hover
+{
+	color: #ff7600;
+}
+.menu-bar ul li a .fa-angle-right
+{
+	transform: rotate(90deg);
+	font-weight: bold;
+	color: #fff;
+}
+.sub-menu-2
+{
+	display:none;
+}
+
+.hover-me:hover .sub-menu-2
+{
+	display: block;
+	position:absolute;
+	background: #0009;
+	margin-top: -40px;
+	margin-left: 140px;
+	transition: 0.1s;
+}
+.menu-bar .search
+{
+	align-items: center;
+	width: 25%;
+	float:right;
+}
+.search input[type=text]
+{
+	padding: 1%;
+	margin-top: 5%;
+	border: none;
+	font-size: 100%;
+	width: 80%;
+}
+.menu-bar .search button
+{
+	
+	width: 15%;
+	padding: 1%;
+	margin-left: -2%;
+	margin-right: 2%;
+	border: none;
+	font-size: 100%;
+}
+/*.burger
+{
+	margin:10px;
+	padding: 10px;
+}
+.burger div
+{
+	width: 35px;
+	height: 3px;
+	background-color: white;
+	margin: 3px;
+	
+}*/
+.menu-bar .menu-icon
+{
+	margin: 5px;
+	padding: 5px;
+	font-size:150%;
+	display: none;
+}
+@media screen and (max-width:1220px)
+{
+	.menu-bar
+	{
+		font-size: 90%;
+	}
+}
+
+@media screen and (max-width:1140px)
+{
+	body
+	{
+		/*display: none;*/
+		font-size: 80%;
+	}
+	
+	.search input[type=text]
+	{
+		margin-top: 5%;
+		font-size: 100%;
+		width: 80%;
+	}
+	
+}
+
+@media screen and (max-width:998px)
+{
+	.search input[type=text]
+	{
+		margin-top: 10%;
+		
+	}
+}
+
+@media screen and (max-width:768px)
+{
+	
+	.menu-bar
+	{
+		overflow-x: hidden;
+	}
+	.menu-bar .nav-links
+	{
+		
+	}
+	.menu-bar .search
+	{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 80px;
+		background: #0008;
+	}
+	
+	.menu-bar .nav-links
+	{
+		width:100%;
+		position: absolute;
+		display: block;
+		top: 135px;
+		background: #0008;
+		text-align: left;
+		
+		transform: translateX(100%);
+		
+	}
+	body .menu-bar
+	{
+		background: #0008;
+	}
+	.menu-bar .nav-links li
+	{
+		width:30%;
+		margin-left: 35%;
+		margin-right: 35%;
+		opacity: 0;
+	}
+	.menu-bar .nav-links li:hover
+	{
+		width:30%;
+		margin-left: 35%;
+		margin-right: 35%;
+		
+	}
+	.menu-bar .active1
+	{
+		width:30%;
+		margin-left: 35%;
+		margin-right: 35%;
+		
+	}
+	.menu-bar .nav-links li:hover  .sub-menu-1
+	{
+		display: inline-flex;
+		position: relative;
+		top: -170px;
+		left: 25%;
+	}
+	.menu-bar .nav-links li a:hover  .sub-menu-1 ul
+	{
+		display: inline-flex;
+		margin: 0;
+		margin-top: 0;
+		padding-top: 0;
+		color: #ff7600;
+		
+	}
+	.menu-bar .nav-links li:hover  .sub-menu-1 ul li
+	{
+		
+		background: #b57515;
+		margin: 0;
+	}
+	.menu-bar .phone:hover  .sub-menu-1 ul 
+	{
+		
+		margin-top: -86px;
+		
+	}
+	.hover-me:hover .sub-menu-2
+	{
+		
+		margin-top: -170px;
+		margin-left: 100px;
+	}
+	.menu-bar .nav-links li:hover .hover-me:hover .sub-menu-2 ul li
+	{
+		background: #a94f01;
+	}
+	.menu-bar .nav-links li a .fa-angle-right
+	{
+		transform: rotate(0deg);
+		
+	}
+	.menu-bar .search .menu-icon
+	{
+		
+		display: flex;
+		padding: 5px;
+		color: white;
+		cursor: pointer;
+	}
+	.menu-bar .search form
+	{
+		margin: 5%;
+		width: 75%;
+	}
+	
+	
+	.search input[type=text]
+	{
+		margin-top:0;
+		font-size: 100%;
+		width: 80%;
+	}
+	
+}
+.active
+	{
+		
+		display: block;
+		transform: translateX(0%);
+		transition: transform 0.5s ease-in;
+	}
+
+
+
